@@ -10,6 +10,7 @@
     href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
   <style>
     * {
@@ -141,7 +142,13 @@
       background-color: #FFF;
     }
 
-    .text-content {
+    .skill .text-content {
+      max-width: 800px;
+    }
+
+    .introduce .text-content,
+    .about .text-content,
+    .contract .text-content {
       max-width: 600px;
     }
 
@@ -240,7 +247,51 @@
     }
 
     .experience-card-area {
-      background-color: white;
+      margin-top: 48px;
+    }
+
+    .experience-card-area .card {
+      background-color: #fff;
+      min-width: calc(100px + 10vw);
+      width: 100%;
+      padding: 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    .experience-card-area .card-logo {
+      width: calc(30px + 10vw);
+      height: auto;
+    }
+
+    .experience-card-area .card-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .experience-card-area .card-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .experience-card-area .card-date {
+      font-size: 0.9rem;
+      color: #666;
+      text-align: right;
+    }
+
+    .experience-card-area .card-description {
+      font-size: 0.95rem;
+      color: #555;
+      list-style-type: disc;
+      margin-left: 20px;
     }
 
     .contact .contact-info {
@@ -299,6 +350,15 @@
     }
 
     @media (max-width: 1024px) {
+      .experience-card-area .card {
+        min-width: calc(30px + 10vw);
+      }
+
+      .experience-card-area .card-logo {
+        width: calc(20px + 10vw);
+        height: auto;
+      }
+
       .about .intro {
         flex-direction: column;
       }
@@ -339,8 +399,23 @@
     }
 
     @media (max-width: 768px) {
+
       nav ul {
         display: none;
+      }
+
+      .experience-card-area .card {
+        min-width: calc(30px + 10vw);
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+
+      .experience-card-area .card-logo {
+        width: calc(100px + 10vw);
+      }
+
+      .experience-card-area .card-date {
+        text-align: left;
       }
 
       .menu-icon {
@@ -488,11 +563,54 @@
         <div>
           Here is a quick summary of my most recent experiences:
         </div>
-        <!-- <div class="experience-card-area">
+        <div class="experience-card-area">
           <div class="card">
-            test
+            <img
+              src="https://lh6.googleusercontent.com/proxy/X-15-LM2khz_zoUhS2PdjWdGgKMErqdoC9mIpy3CPKKSVTT5QcPUjgfHQlTzXoi5VdxVEP32_881EPU13DH3LGsTlyzkzr5HD8E5eH9quHiEDM3NHpx2OiLa8rlkN4Bv8Q"
+              alt="Company Logo" class="card-logo">
+            <div class="card-content">
+              <div class="card-title">Senior software engineer</div>
+              <ul class="card-description">
+                <li>Develop a payment transaction system to reduce manual money transfers to customers.</li>
+                <li>Onboarded and mentored new team members, introduced them to the systems managed by the team, and
+                  developed training courses based on real tasks handled by the team.</li>
+                <li>Ensured high availability and reliability of services by integrating AWS SQS for message queuing and
+                  processing.</li>
+                <li>Improved system performance and reduced downtime by optimizing PostgreSQL database queries.</li>
+                <li>Collaborated with frontend developers to create responsive and dynamic user interfaces using Vue.js.
+                </li>
+                <li>Mobile Development Assistance (Android): Assisted the mobile team for 2 sprints, focusing on Android
+                  development, feature integration, debugging, and performance optimization.</li>
+                <li>Developed tools from scratch, including a Git branch comparison tool to reduce merge down time and
+                  testing tools that enabled QA to verify work more efficiently.</li>
+                <li>Handled urgent cases and incidents on production for team and surrounding modules, ensuring timely
+                  resolution under the supervision of the team lead.</li>
+                <li>Designing and implementing software solutions.</li>
+                <li>Developed and maintained backend services using C#, C# GraphQL, and Python Lambda on AWS.</li>
+                <li>Install Cypress in the project to automate tests to verify the original feature code.</li>
+              </ul>
+            </div>
+            <div class="card-date">Aug 2023 - Present</div>
           </div>
-        </div> -->
+        </div>
+        <div class="experience-card-area">
+          <div class="card">
+            <img
+              src="https://lh6.googleusercontent.com/proxy/X-15-LM2khz_zoUhS2PdjWdGgKMErqdoC9mIpy3CPKKSVTT5QcPUjgfHQlTzXoi5VdxVEP32_881EPU13DH3LGsTlyzkzr5HD8E5eH9quHiEDM3NHpx2OiLa8rlkN4Bv8Q"
+              alt="Company Logo" class="card-logo">
+            <div class="card-content">
+              <div class="card-title">Software engineer</div>
+              <ul class="card-description">
+                <li>Assisted in developing and maintaining financial transaction systems.</li>
+                <li>Worked on backend services using C# and Python Lambda on AWS.</li>
+                <li>Supported the deployment and monitoring of services on AWS ECS.</li>
+                <li>Assisted in database management and optimization using PostgreSQL.</li>
+                <li>Contributed to the development of frontend features using Vue.js.</li>
+              </ul>
+            </div>
+            <div class="card-date">Jun 2021 - Aug 2023</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -538,47 +656,7 @@
       </div>
     </div>
   </div>
-  <script>
-    const skills = [
-      { name: "JavaScript", icon: "https://skillforge.com/wp-content/uploads/2020/10/javascript.png" },
-      { name: "TypeScript", icon: "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/square_480/typescriptlang.png" },
-      { name: "VueJs", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/640px-Vue.js_Logo_2.svg.png" },
-      { name: "AngularJs", icon: "https://railsware.com/blog/wp-content/uploads/2014/09/Make-AngularJS.png" },
-      { name: "NextJs", icon: "https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png" },
-      { name: "NestJs", icon: "https://static-00.iconduck.com/assets.00/nestjs-icon-512x510-9nvpcyc3.png" },
-      { name: "C#", icon: "https://www.vikingsoftware.com/wp-content/uploads/2024/02/C.png" },
-      { name: "GraphQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/800px-GraphQL_Logo.svg.png" },
-      { name: "Python", icon: "https://banner2.cleanpng.com/20180325/kpq/av0y5r3i9.webp" },
-      { name: "PostgreSQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" },
-      { name: "MySQL", icon: "https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png?ssl=1" },
-      { name: "MongoDB", icon: "https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png" },
-      { name: "Bootstrap", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png" },
-      { name: "TailwindCSS", icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" },
-      { name: "Cypress", icon: "https://i0.wp.com/letzdotesting.com/wp-content/uploads/2024/03/Cypress.png?fit=600%2C315&ssl=1" },
-      { name: "Git", icon: "https://miro.medium.com/v2/resize:fit:383/0*5g3mp6zgIoqprOgV.png" },
-      { name: "AWS Lambda", icon: "https://d1.awsstatic.com/serverless/Lambda%20Resources%20images/lambda_logo.674434aff2888039ce0552276bd963e73852e8a4.png" },
-      { name: "AWS SQS", icon: "https://whatthelogo.com/storage/logos/aws-sqs-simple-queue-service-275002.png" },
-    ];
-
-    const skillsContainer = document.getElementById("skillsContainer");
-
-    skills.forEach(skill => {
-      const skillElement = document.createElement("div");
-      skillElement.classList.add("skill");
-
-      const icon = document.createElement("img");
-      icon.src = skill.icon;
-      icon.alt = skill.name;
-
-      const name = document.createElement("p");
-      name.textContent = skill.name;
-
-      skillElement.appendChild(icon);
-      skillElement.appendChild(name);
-
-      skillsContainer.appendChild(skillElement);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
