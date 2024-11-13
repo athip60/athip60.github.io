@@ -1,1 +1,315 @@
-hello world
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      color: #333;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .text {
+      font-family: "Sarabun", sans-serif !important;
+      font-style: normal;
+    }
+
+    .text .light {
+      font-weight: 200;
+    }
+
+    .text .regular {
+      font-weight: 400;
+    }
+
+    header {
+      width: 100%;
+      padding: 20px;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: flex;
+      align-items: center;
+    }
+
+    .download-cv {
+      padding: 8px 16px;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    nav ul li a,
+    .download-cv {
+      font-size: 16px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .download-cv {
+      font-weight: bold;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      font-size: 24px;
+      display: none;
+    }
+
+    .li-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .intro {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 96px 20px;
+      margin: 0 auto;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .bg-odd {
+      background-color: #F9FAFB;
+    }
+
+    .bg-even {
+      background-color: #FFF;
+    }
+
+    .text-content {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .text-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .text-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .location {
+      display: grid;
+      align-items: left;
+      gap: 10px 0px;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 48px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+    }
+
+    .icons,
+    a {
+      text-decoration: none;
+      font-size: 24px;
+      color: #666;
+      cursor: pointer;
+    }
+
+    .profile-image {
+      width: 240px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile {
+      visibility: hidden;
+      display: none;
+    }
+
+    .pc {
+      visibility: visible;
+      display: inline;
+    }
+
+    .intro .emoji {
+      font-size: 36px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+
+      .menu-icon {
+        display: inline;
+      }
+
+      .mobile {
+        visibility: visible;
+        display: inline;
+      }
+
+      .pc {
+        visibility: hidden;
+        display: none;
+      }
+
+      .intro {
+        flex-direction: column;
+      }
+
+      .text-content h1 {
+        font-size: 28px;
+      }
+
+      .text-content p {
+        font-size: 16px;
+      }
+
+      .profile-image {
+        margin-bottom: 20px;
+      }
+
+    }
+
+    .copy-right {
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px !important;
+    }
+
+    .copy-right a {
+      text-decoration: underline;
+      font-size: 16px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <div class="logo text regular">My Portfolio</div>
+    </div>
+    <nav>
+      <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+      <ul>
+        <li><a class="text regular" href="#about">About</a></li>
+        <li><a class="text regular" href="#testimonials">Skill</a></li>
+        <li><a class="text regular" href="#contact">Experience</a></li>
+        <li><a class="text regular" href="#work">Work</a></li>
+        <li><a class="text regular" href="#contact">Contact</a></li>
+        <li><button class="text light download-cv">Download CV</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="introduce">
+    <div class="intro bg-even text">
+      <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image mobile">
+      <div class="text-content">
+        <h1>Hi, I'm Ahom <span class="emoji">👋</span></h1>
+        <p>I'm a Senior Software Engineer with over 1 year of experience in a senior role and 2 years as a Software
+          Engineer, totaling over 3 years of full-stack development experience within the financial workflow sector. I
+          specialize in designing system architectures that meet stakeholder needs, primarily utilizing AWS for cloud
+          monitoring. I thrive in team collaboration, overcoming challenges, and delivering innovative solutions.</p>
+        <div class="location">
+          <div>
+            <span><i class="fa-solid fa-location-dot"></i> Nonthaburi, Thailand</span>
+          </div>
+          <div>
+            <span><i class="fa-solid fa-circle" style="color: #10b981;"></i> Available for new projects</span>
+          </div>
+        </div>
+
+        <div class="icons">
+          <a href="https://github.com/athip60" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/athip-sirisawetkunwong-695843225/" target="_blank"><i
+              class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image pc">
+    </div>
+  </div>
+  <div class="about">
+    <div class="intro bg-odd text">
+
+    </div>
+  </div>
+  <div class="skill">
+    <div class="intro bg-even text">
+    </div>
+  </div>
+  <div class="experience">
+    <div class="intro bg-odd text">
+    </div>
+  </div>
+  <div class="work">
+    <div class="intro bg-even text">
+    </div>
+  </div>
+  <div class="contact">
+    <div class="intro bg-odd text">
+    </div>
+  </div>
+  <div class="copy-right">
+    <div class="bg-even text regular">
+      <div>
+        © 2024 | Design inspired by <a
+          href="https://www.figma.com/community/file/1262992249991763120/personal-portfolio-website-template-mobile-desktop"
+          target="_blank">Sagar Shah</a> Code independently written by Athip sirisawetkunwong.
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
