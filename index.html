@@ -120,6 +120,12 @@
       align-items: center;
     }
 
+    .around-center-flex-start {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
+    }
+
     .center-center {
       display: flex;
       flex-direction: column;
@@ -185,11 +191,15 @@
       cursor: pointer;
     }
 
-    .profile-image {
-      width: 240px;
+    .introduce .profile-image {
+      width: calc(150px + 10vw);
       height: auto;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .about .profile-image {
+      width: calc(250px + 10vw);
     }
 
     .mobile {
@@ -206,6 +216,9 @@
       font-size: 36px;
     }
 
+    .about .badge-title {
+      margin-bottom: 48px;
+    }
 
     .skill .skills-container {
       display: flex;
@@ -224,6 +237,10 @@
       width: 50px;
       height: 50px;
       object-fit: contain;
+    }
+
+    .experience-card-area {
+      background-color: white;
     }
 
     .contact .contact-info {
@@ -281,6 +298,46 @@
       color: #666;
     }
 
+    @media (max-width: 1024px) {
+      .about .intro {
+        flex-direction: column;
+      }
+
+      .introduce .intro {
+        flex-direction: column;
+      }
+
+      .flex-row {
+        align-items: center;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .about .profile-image {
+        width: calc(300px + 10vw);
+      }
+
+      .about .mobile {
+        visibility: visible;
+        display: inline;
+      }
+
+      .about .pc {
+        visibility: hidden;
+        display: none;
+      }
+
+      .introduce .mobile {
+        visibility: visible;
+        display: inline;
+      }
+
+      .introduce .pc {
+        visibility: hidden;
+        display: none;
+      }
+    }
+
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -288,6 +345,10 @@
 
       .menu-icon {
         display: inline;
+      }
+
+      .about .profile-image {
+        width: calc(240px + 10vw);
       }
 
       .mobile {
@@ -298,10 +359,6 @@
       .pc {
         visibility: hidden;
         display: none;
-      }
-
-      .intro {
-        flex-direction: column;
       }
 
       .text-content h1 {
@@ -373,10 +430,43 @@
       <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image pc">
     </div>
   </div>
-  <div class="about bg-odd ">
-    <div class="intro center-center text">
-      <div class="text-content content-center">
-        <div class="badge-title">About me</div>
+  <div class="about">
+    <div class="intro bg-odd text">
+      <div class="center-center">
+        <div class="text-content content-center">
+          <div class="badge-title">About me</div>
+        </div>
+      </div>
+      <div class="flex-row around-center-flex-start">
+        <img src="https://i.ibb.co/6HmPtr1/266866496-4649611891783785-4976658161543303730-n.jpg"
+          alt="Image Profile About" class="profile-image">
+        <div class="text-content content-flex-start">
+          <h1>Curious about me? Here you have it:</h1>
+          <p>I'm a Senior Software Engineer with a strong focus on creating efficient, high-performance systems through
+            backend and frontend development, as well as database design. My goal is to develop solutions that not only
+            address immediate challenges but also maintain resilience for long-term use. I thrive on working
+            collaboratively with my team to create systems that simplify complex transactions and enhance productivity.
+          </p>
+          <p>My journey began as a Software Engineer at Ngernturbo Co. Ltd in 2021, where I took on responsibilities in
+            developing and maintaining transaction systems. This role allowed me to develop new tools for QA, optimize
+            database performance, and reduce system downtime. Over the years, I've expanded my skill set, diving into
+            new technologies and building solutions from the ground up.
+          </p>
+          <p>Currently, as a Senior Software Engineer, I focus on building robust systems, working closely with the
+            frontend team to create responsive user interfaces with Vue.js and leveraging AWS to ensure high system
+            availability and reliability. My responsibilities also extend to assisting the Android development team with
+            feature integration and performance tuning, as well as providing tools that improve testing efficiency.
+          </p>
+          <p>
+            In my spare time, I enjoy learning about new technologies and improving my programming skills, particularly
+            in areas like GraphQL, GO, and PostgreSQL. I'm also passionate about designing resilient architectures and
+            using tools like Docker and Cypress to streamline testing and development processes.
+          </p>
+          <p>
+            If you're looking for a developer skilled in both frontend and backend with experience in managing complex
+            systems, I'm here to help your project succeed!
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -397,6 +487,11 @@
         <div class="badge-title">Experience</div>
         <div>
           Here is a quick summary of my most recent experiences:
+        </div>
+        <div class="experience-card-area">
+          <div class="card">
+            test
+          </div>
         </div>
       </div>
     </div>
