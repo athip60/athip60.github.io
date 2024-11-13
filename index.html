@@ -89,7 +89,6 @@
       color: #fff;
       border: none;
       border-radius: 10px;
-      cursor: pointer;
     }
 
     .menu-icon {
@@ -103,14 +102,29 @@
       align-items: center;
     }
 
+
     .intro {
+      padding: 96px 20px;
+      margin: 0 auto;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .around-center {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 96px 20px;
-      margin: 0 auto;
-      flex-direction: row;
-      gap: 20px;
+    }
+
+    .center-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .bg-odd {
@@ -123,9 +137,19 @@
 
     .text-content {
       max-width: 600px;
+    }
+
+    .text-content .content-flex-start {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+    }
+
+    .text-content .content-center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
 
     .text-content h1 {
@@ -182,6 +206,81 @@
       font-size: 36px;
     }
 
+
+    .skill .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 48px;
+    }
+
+    .skill .skill {
+      text-align: center;
+      width: 120px;
+    }
+
+    .skill .skill img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .contact .contact-info {
+      font-size: 40px;
+      margin: 48px 0px;
+    }
+
+    .contact .contact-info .mail,
+    .contact .contact-info .tel {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact .contact-social-info .icons {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 8px;
+      padding: 0;
+    }
+
+    .contact .contact-info i {
+      font-size: 30px;
+    }
+
+    .badge-title {
+      background-color: #E5E7EB;
+      color: #4B5563;
+      padding: 4px 20px;
+      border: none;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      width: fit-content;
+      display: inline-block;
+    }
+
+    .copy-right {
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px !important;
+    }
+
+    .copy-right a {
+      text-decoration: underline;
+      font-size: 16px;
+      color: #666;
+    }
+
     @media (max-width: 768px) {
       nav ul {
         display: none;
@@ -206,31 +305,25 @@
       }
 
       .text-content h1 {
-        font-size: 28px;
+        font-size: 1rem;
       }
 
       .text-content p {
-        font-size: 16px;
+        font-size: 1rem;
       }
 
       .profile-image {
+        width: 100px;
         margin-bottom: 20px;
       }
 
-    }
+      .contact .contact-info {
+        font-size: 1rem;
+      }
 
-    .copy-right {
-      padding: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 16px !important;
-    }
-
-    .copy-right a {
-      text-decoration: underline;
-      font-size: 16px;
-      color: #666;
+      .contact .contact-info i {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
@@ -254,9 +347,9 @@
   </header>
 
   <div class="introduce">
-    <div class="intro bg-even text">
+    <div class="intro flex-row around-center bg-even text">
       <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image mobile">
-      <div class="text-content">
+      <div class="text-content content-flex-start">
         <h1>Hi, I'm Ahom <span class="emoji">👋</span></h1>
         <p>I'm a Senior Software Engineer with over 1 year of experience in a senior role and 2 years as a Software
           Engineer, totaling over 3 years of full-stack development experience within the financial workflow sector. I
@@ -280,29 +373,69 @@
       <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image pc">
     </div>
   </div>
-  <div class="about">
-    <div class="intro bg-odd text">
-
+  <div class="about bg-odd ">
+    <div class="intro center-center text">
+      <div class="text-content content-center">
+        <div class="badge-title">About me</div>
+      </div>
     </div>
   </div>
-  <div class="skill">
-    <div class="intro bg-even text">
+  <div class="skill bg-even">
+    <div class="intro center-center text">
+      <div class="text-content content-center">
+        <div class="badge-title">Skills</div>
+        <div>
+          The skills, tools and technologies I am really good at:
+        </div>
+        <div class="skills-container" id="skillsContainer"></div>
+      </div>
     </div>
   </div>
-  <div class="experience">
-    <div class="intro bg-odd text">
+  <div class="experience bg-odd ">
+    <div class="intro center-center text">
+      <div class="text-content content-center">
+        <div class="badge-title">Experience</div>
+        <div>
+          Here is a quick summary of my most recent experiences:
+        </div>
+      </div>
     </div>
   </div>
-  <div class="work">
-    <div class="intro bg-even text">
+  <div class="contact bg-even">
+    <div class="intro center-center text">
+      <div class="text-content content-center">
+        <div class="badge-title">Get in touch</div>
+        <div>
+          What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to
+          connect.
+        </div>
+        <div class="contact-info">
+          <div class="mail">
+            <i class="fas fa-envelope"></i>
+            <div>athip.siri42@gmail.com</div>
+            <i class="fas fa-copy"></i>
+          </div>
+          <div class="tel">
+            <i class="fas fa-phone-alt"></i>
+            <div>+66 624247542</div>
+            <i class="fas fa-copy"></i>
+          </div>
+        </div>
+        <div class="contact-social-info">
+          <div>
+            You may also find me on these platforms!
+          </div>
+          <div class="icons">
+            <a href="https://github.com/athip60" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/athip-sirisawetkunwong-695843225/" target="_blank"><i
+                class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="contact">
-    <div class="intro bg-odd text">
-    </div>
-  </div>
-  <div class="copy-right">
-    <div class="bg-even text regular">
+  <div class="copy-right bg-odd">
+    <div class="text regular">
       <div>
         © 2024 | Design inspired by <a
           href="https://www.figma.com/community/file/1262992249991763120/personal-portfolio-website-template-mobile-desktop"
@@ -310,6 +443,47 @@
       </div>
     </div>
   </div>
+  <script>
+    const skills = [
+      { name: "JavaScript", icon: "https://skillforge.com/wp-content/uploads/2020/10/javascript.png" },
+      { name: "TypeScript", icon: "https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/square_480/typescriptlang.png" },
+      { name: "VueJs", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/640px-Vue.js_Logo_2.svg.png" },
+      { name: "AngularJs", icon: "https://railsware.com/blog/wp-content/uploads/2014/09/Make-AngularJS.png" },
+      { name: "NextJs", icon: "https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png" },
+      { name: "NestJs", icon: "https://static-00.iconduck.com/assets.00/nestjs-icon-512x510-9nvpcyc3.png" },
+      { name: "C#", icon: "https://www.vikingsoftware.com/wp-content/uploads/2024/02/C.png" },
+      { name: "GraphQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/800px-GraphQL_Logo.svg.png" },
+      { name: "Python", icon: "https://banner2.cleanpng.com/20180325/kpq/av0y5r3i9.webp" },
+      { name: "PostgreSQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png" },
+      { name: "MySQL", icon: "https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png?ssl=1" },
+      { name: "MongoDB", icon: "https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png" },
+      { name: "Bootstrap", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png" },
+      { name: "TailwindCSS", icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png" },
+      { name: "Cypress", icon: "https://i0.wp.com/letzdotesting.com/wp-content/uploads/2024/03/Cypress.png?fit=600%2C315&ssl=1" },
+      { name: "Git", icon: "https://miro.medium.com/v2/resize:fit:383/0*5g3mp6zgIoqprOgV.png" },
+      { name: "AWS Lambda", icon: "https://d1.awsstatic.com/serverless/Lambda%20Resources%20images/lambda_logo.674434aff2888039ce0552276bd963e73852e8a4.png" },
+      { name: "AWS SQS", icon: "https://whatthelogo.com/storage/logos/aws-sqs-simple-queue-service-275002.png" },
+    ];
+
+    const skillsContainer = document.getElementById("skillsContainer");
+
+    skills.forEach(skill => {
+      const skillElement = document.createElement("div");
+      skillElement.classList.add("skill");
+
+      const icon = document.createElement("img");
+      icon.src = skill.icon;
+      icon.alt = skill.name;
+
+      const name = document.createElement("p");
+      name.textContent = skill.name;
+
+      skillElement.appendChild(icon);
+      skillElement.appendChild(name);
+
+      skillsContainer.appendChild(skillElement);
+    });
+  </script>
 </body>
 
 </html>
