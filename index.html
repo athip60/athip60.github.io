@@ -7,7 +7,22 @@
   <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer">
-
+  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://cdnjs.cloudflare.com;
+    style-src 'self' https://cdnjs.cloudflare.com;
+    font-src 'self' https://cdnjs.cloudflare.com;
+    img-src *;
+    object-src 'none';
+    frame-ancestors 'none';
+  ">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-random123';">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha384-dyB6wz7PqGtXITLefv6NpdavD9F/43tWwTmY8N7d8LVyD8NzL8ShI9y+DJ7iWmZJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O/S4P5h3oRn4LY6fxsmQ8hhNxXtAJ+N2Fz"
+    crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
