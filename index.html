@@ -14,454 +14,8 @@
     href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Portfolio</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      color: #333;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .text {
-      font-family: "Sarabun", sans-serif !important;
-      font-style: normal;
-    }
-
-    .text .light {
-      font-weight: 200;
-    }
-
-    .text .regular {
-      font-weight: 400;
-    }
-
-    header {
-      width: 100%;
-      padding: 20px;
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li {
-      display: flex;
-      align-items: center;
-    }
-
-    .download-cv {
-      padding: 8px 16px;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-left: 20px;
-    }
-
-    nav ul li a,
-    .download-cv {
-      font-size: 16px;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .download-cv {
-      font-weight: bold;
-      background-color: #000;
-      color: #fff;
-      border: none;
-      border-radius: 10px;
-    }
-
-    .menu-icon {
-      font-size: 24px;
-      display: none;
-    }
-
-    .li-nav {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-
-    .intro {
-      padding: 96px 20px;
-      margin: 0 auto;
-    }
-
-    .flex-row {
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-    }
-
-    .around-center {
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    .around-center-flex-start {
-      display: flex;
-      justify-content: space-around;
-      align-items: flex-start;
-    }
-
-    .center-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .bg-odd {
-      background-color: #F9FAFB;
-    }
-
-    .bg-even {
-      background-color: #FFF;
-    }
-
-    .skill .text-content {
-      max-width: 800px;
-    }
-
-    .introduce .text-content,
-    .about .text-content,
-    .contract .text-content {
-      max-width: 600px;
-    }
-
-    .text-content .content-flex-start {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .text-content .content-center {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .text-content h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .text-content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .location {
-      display: grid;
-      align-items: left;
-      gap: 10px 0px;
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 48px;
-    }
-
-    .icons {
-      display: flex;
-      gap: 15px;
-    }
-
-    .icons,
-    a {
-      text-decoration: none;
-      font-size: 24px;
-      color: #666;
-      cursor: pointer;
-    }
-
-    .introduce .profile-image {
-      width: calc(150px + 10vw);
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .about .profile-image {
-      width: calc(250px + 10vw);
-    }
-
-    .mobile {
-      visibility: hidden;
-      display: none;
-    }
-
-    .pc {
-      visibility: visible;
-      display: inline;
-    }
-
-    .intro .emoji {
-      font-size: 36px;
-    }
-
-    .about .badge-title {
-      margin-bottom: 48px;
-    }
-
-    .skill .skills-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 48px;
-    }
-
-    .skill .skill {
-      text-align: center;
-      width: 120px;
-    }
-
-    .skill .skill img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    .experience-card-area {
-      margin-top: 48px;
-    }
-
-    .experience-card-area .card {
-      background-color: #fff;
-      min-width: calc(100px + 10vw);
-      width: 100%;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      gap: 48px;
-      align-items: flex-start;
-    }
-
-    .experience-card-area .card-logo {
-      width: calc(30px + 10vw);
-      height: auto;
-    }
-
-    .experience-card-area .card-content {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      text-align: left;
-    }
-
-    .experience-card-area .card-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .experience-card-area .card-date {
-      font-size: 0.9rem;
-      color: #666;
-      text-align: right;
-    }
-
-    .experience-card-area .card-description {
-      font-size: 0.95rem;
-      color: #555;
-      list-style-type: disc;
-      margin-left: 20px;
-    }
-
-    .contact .contact-info {
-      font-size: 40px;
-      margin: 48px 0px;
-    }
-
-    .contact .contact-info .mail,
-    .contact .contact-info .tel {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      padding: 0;
-    }
-
-    .contact .contact-social-info .icons {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      align-items: center;
-      margin-top: 8px;
-      padding: 0;
-    }
-
-    .contact .contact-info i {
-      font-size: 30px;
-    }
-
-    .badge-title {
-      background-color: #E5E7EB;
-      color: #4B5563;
-      padding: 4px 20px;
-      border: none;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      width: fit-content;
-      display: inline-block;
-    }
-
-    .copy-right {
-      padding: 24px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 16px !important;
-    }
-
-    .copy-right a {
-      text-decoration: underline;
-      font-size: 16px;
-      color: #666;
-    }
-
-    @media (max-width: 1024px) {
-      .experience-card-area .card {
-        min-width: calc(30px + 10vw);
-      }
-
-      .experience-card-area .card-logo {
-        width: calc(20px + 10vw);
-        height: auto;
-      }
-
-      .about .intro {
-        flex-direction: column;
-      }
-
-      .introduce .intro {
-        flex-direction: column;
-      }
-
-      .flex-row {
-        align-items: center;
-        flex-direction: column;
-        gap: 48px;
-      }
-
-      .about .profile-image {
-        width: calc(300px + 10vw);
-      }
-
-      .about .mobile {
-        visibility: visible;
-        display: inline;
-      }
-
-      .about .pc {
-        visibility: hidden;
-        display: none;
-      }
-
-      .introduce .mobile {
-        visibility: visible;
-        display: inline;
-      }
-
-      .introduce .pc {
-        visibility: hidden;
-        display: none;
-      }
-    }
-
-    @media (max-width: 768px) {
-
-      nav ul {
-        display: none;
-      }
-
-      .experience-card-area .card {
-        min-width: calc(30px + 10vw);
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
-
-      .experience-card-area .card-logo {
-        width: calc(100px + 10vw);
-      }
-
-      .experience-card-area .card-date {
-        text-align: left;
-      }
-
-      .menu-icon {
-        display: inline;
-      }
-
-      .about .profile-image {
-        width: calc(240px + 10vw);
-      }
-
-      .mobile {
-        visibility: visible;
-        display: inline;
-      }
-
-      .pc {
-        visibility: hidden;
-        display: none;
-      }
-
-      .text-content h1 {
-        font-size: 1rem;
-      }
-
-      .text-content p {
-        font-size: 1rem;
-      }
-
-      .profile-image {
-        width: 100px;
-        margin-bottom: 20px;
-      }
-
-      .contact .contact-info {
-        font-size: 1rem;
-      }
-
-      .contact .contact-info i {
-        font-size: 1rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -472,11 +26,10 @@
     <nav>
       <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
       <ul>
-        <li><a class="text regular" href="#about">About</a></li>
-        <li><a class="text regular" href="#testimonials">Skill</a></li>
-        <li><a class="text regular" href="#contact">Experience</a></li>
-        <li><a class="text regular" href="#work">Work</a></li>
-        <li><a class="text regular" href="#contact">Contact</a></li>
+        <li><a class="text regular" href="#aboutSaction" id="scrollLink">About</a></li>
+        <li><a class="text regular" href="#skillSaction" id="scrollLink">Skill</a></li>
+        <li><a class="text regular" href="#experienceSaction" id="scrollLink">Experience</a></li>
+        <li><a class="text regular" href="#contactSaction" id="scrollLink">Contact</a></li>
         <li><button class="text light download-cv">Download CV</button></li>
       </ul>
     </nav>
@@ -509,7 +62,7 @@
       <img src="https://i.ibb.co/x6hQYLm/IMG-3936.jpg" alt="Image Profile" class="profile-image pc">
     </div>
   </div>
-  <div class="about">
+  <div class="about" id="aboutSaction">
     <div class="intro bg-odd text">
       <div class="center-center">
         <div class="text-content content-center">
@@ -550,7 +103,7 @@
       </div>
     </div>
   </div>
-  <div class="skill bg-even">
+  <div class="skill bg-even" id="skillSaction">
     <div class="intro center-center text">
       <div class="text-content content-center">
         <div class="badge-title">Skills</div>
@@ -561,7 +114,7 @@
       </div>
     </div>
   </div>
-  <div class="experience bg-odd ">
+  <div class="experience bg-odd" id="experienceSaction">
     <div class="intro center-center text">
       <div class="text-content content-center">
         <div class="badge-title">Experience</div>
@@ -619,7 +172,7 @@
       </div>
     </div>
   </div>
-  <div class="contact bg-even">
+  <div class="contact bg-even" id="contactSaction">
     <div class="intro center-center text">
       <div class="text-content content-center">
         <div class="badge-title">Get in touch</div>
@@ -630,13 +183,13 @@
         <div class="contact-info">
           <div class="mail">
             <i class="fas fa-envelope"></i>
-            <div>athip.siri42@gmail.com</div>
-            <i class="fas fa-copy"></i>
+            <a href="mailto:athip.siri42@gmail.com">athip.siri42@gmail.com</a>
+            <i class="fas fa-copy" onclick="copyToClipboard('athip.siri42@gmail.com')" title="Copy Email"></i>
           </div>
           <div class="tel">
             <i class="fas fa-phone-alt"></i>
-            <div>+66 624247542</div>
-            <i class="fas fa-copy"></i>
+            <a href="tel:+6624247542">+66 624247542</a>
+            <i class="fas fa-copy" onclick="copyToClipboard('+6624247542')" title="Copy Phone"></i>
           </div>
         </div>
         <div class="contact-social-info">
@@ -661,7 +214,7 @@
       </div>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>

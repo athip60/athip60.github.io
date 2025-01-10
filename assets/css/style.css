@@ -334,6 +334,25 @@ a {
   color: #666;
 }
 
+.contact-info .fas {
+  cursor: pointer;
+}
+
+.contact-info .fas:hover::after {
+  content: attr(title);
+  position: absolute;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 3px;
+  top: -30px;
+  font-size: 12px;
+}
+
+.copied-animation {
+  animation: shake 0.3s ease;
+}
+
 @media (max-width: 1024px) {
   .experience-card-area .card {
     min-width: calc(30px + 10vw);

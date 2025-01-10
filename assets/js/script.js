@@ -37,3 +37,29 @@ skills.forEach(skill => {
 
   skillsContainer.appendChild(skillElement);
 });
+
+document.getElementById('scrollLink').addEventListener('click', function (event) {
+  event.preventDefault();
+  const target = document.querySelector(this.getAttribute('href'));
+  target.scrollIntoView({ behavior: 'smooth' });
+});
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`Copied: ${text}`);
+  }).catch(err => {
+    console.error('Failed to copy!', err);
+  });
+}
+
+document.querySelectorAll('.fas.fa-copy').forEach(icon => {
+  icon.addEventListener('click', function () {
+    this.classList.add('copied-animation');
+    setTimeout(() => this.classList.remove('copied-animation'), 300);
+  });
+});
+
+document.querySelector('.download-cv').addEventListener('click', function () {
+  const fileUrl = 'assets/files/cv.pdf';
+  window.open(fileUrl, '_blank');
+});
