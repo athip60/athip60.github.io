@@ -4,31 +4,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-Frame-Options" content="DENY">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'none';">
   <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' https://cdnjs.cloudflare.com;
-    style-src 'self' https://cdnjs.cloudflare.com;
-    font-src 'self' https://cdnjs.cloudflare.com;
-    img-src *;
-    object-src 'none';
-    frame-ancestors 'none';
-  ">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-random123';">
+      default-src 'self';
+      script-src 'self' https://cdnjs.cloudflare.com;
+      style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+      font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self'  https://skillforge.com/wp-content/uploads/2020/10/javascript.png https://d2eip9sf3oo6c2.cloudfront.net/tags/images/000/000/377/square_480/typescriptlang.png https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/640px-Vue.js_Logo_2.svg.png https://railsware.com/blog/wp-content/uploads/2014/09/Make-AngularJS.png https://static-00.iconduck.com/assets.00/nextjs-icon-1024x1024-5et230l7.png https://static-00.iconduck.com/assets.00/nestjs-icon-512x510-9nvpcyc3.png https://www.vikingsoftware.com/wp-content/uploads/2024/02/C.png https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/800px-GraphQL_Logo.svg.png https://banner2.cleanpng.com/20180325/kpq/av0y5r3i9.webp https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png https://i0.wp.com/saixiii.com/wp-content/uploads/2017/04/mysql.png https://miro.medium.com/v2/resize:fit:512/1*doAg1_fMQKWFoub-6gwUiQ.png https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/800px-Bootstrap_logo.svg.png https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png https://i0.wp.com/letzdotesting.com/wp-content/uploads/2024/03/Cypress.png https://miro.medium.com/v2/resize:fit:383/0*5g3mp6zgIoqprOgV.png https://d1.awsstatic.com/serverless/Lambda%20Resources%20images/lambda_logo.674434aff2888039ce0552276bd963e73852e8a4.png https://whatthelogo.com/storage/logos/aws-sqs-simple-queue-service-275002.png https://i.ibb.co/6HmPtr1/266866496-4649611891783785-4976658161543303730-n.jpg https://i.ibb.co/x6hQYLm/IMG-3936.jpg https://lh6.googleusercontent.com/proxy/X-15-LM2khz_zoUhS2PdjWdGgKMErqdoC9mIpy3CPKKSVTT5QcPUjgfHQlTzXoi5VdxVEP32_881EPU13DH3LGsTlyzkzr5HD8E5eH9quHiEDM3NHpx2OiLa8rlkN4Bv8Q;
+      connect-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+    ">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    integrity="sha384-dyB6wz7PqGtXITLefv6NpdavD9F/43tWwTmY8N7d8LVyD8NzL8ShI9y+DJ7iWmZJ" crossorigin="anonymous">
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-    integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7O/S4P5h3oRn4LY6fxsmQ8hhNxXtAJ+N2Fz"
+    integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Portfolio</title>
 </head>
@@ -64,7 +63,7 @@
             <span><i class="fa-solid fa-location-dot"></i> Nonthaburi, Thailand</span>
           </div>
           <div>
-            <span><i class="fa-solid fa-circle" style="color: #10b981;"></i> Available for new projects</span>
+            <span><i class="fa-solid fa-circle not-avaliable"></i> Not Available for new projects</span>
           </div>
         </div>
 

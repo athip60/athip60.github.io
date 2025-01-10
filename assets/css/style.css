@@ -348,7 +348,12 @@ a {
   top: -30px;
   font-size: 12px;
 }
-
+.avaliable {
+  color: #10b981;
+}
+.not-avaliable {
+  color: #949494;
+}
 .copied-animation {
   animation: shake 0.3s ease;
 }
